@@ -1,5 +1,5 @@
 # Hyper-V-Toggle-Script
-A script to toggle between enabling or disabling Hyper-V.
+A bat script to toggle between enabling or disabling Hyper-V.
 Note: Run .at file as Admin.
 
 Press enter to continue each step.
