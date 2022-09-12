@@ -25,6 +25,8 @@ echo "Enabling Hyper-V"
 pause
 echo "Setting hypervisorlaunchtype auto"
 bcdedit /set hypervisorlaunchtype auto
+echo "Enabling Hyper-V"
+DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 Goto end
 :2
 echo "Disabling Hyper-V"
@@ -33,6 +35,8 @@ echo "Setting hypervisorlaunchtype off"
 bcdedit /set hypervisorlaunchtype off
 echo "Setting Registry keys"
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f
+echo "Disabling Hyper-V"
+DISM /Online /Disable-Feature /All /FeatureName:Microsoft-Hyper-V
 Goto end
 
 :end
