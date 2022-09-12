@@ -39,7 +39,8 @@ Goto end
 
 :end
 
-echo "A Restart is needed... Press 'Enter' to Continue..."
+echo "*** A Restart is needed... Please save your work before continuing... ***"
+echo "(Press 'Ctrl' + 'C' or close the script if you wish to restart later)"
 pause
 shutdown /r
 
