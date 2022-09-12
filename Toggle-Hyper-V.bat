@@ -1,8 +1,6 @@
 @echo off
 
-TITLE Select Steam account
-
-taskkill.exe /F /IM steam.exe
+TITLE Toggle Hyper-V
 
 cls
 echo(
@@ -21,7 +19,7 @@ If Errorlevel 2 Goto 2
 If Errorlevel 1 Goto 1
 
 :1
-echo "Enabling Hyper-V"
+echo "Enabling Hyper-V..."
 pause
 echo "Setting hypervisorlaunchtype auto"
 bcdedit /set hypervisorlaunchtype auto
@@ -29,7 +27,7 @@ echo "Enabling Hyper-V"
 DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 Goto end
 :2
-echo "Disabling Hyper-V"
+echo "Disabling Hyper-V..."
 pause
 echo "Setting hypervisorlaunchtype off"
 bcdedit /set hypervisorlaunchtype off
@@ -41,7 +39,7 @@ Goto end
 
 :end
 
-echo "A Restart is needed..."
+echo "A Restart is needed... Press 'Enter' to Continue..."
 pause
 shutdown /r
 
