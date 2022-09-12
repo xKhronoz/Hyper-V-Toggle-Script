@@ -6,8 +6,8 @@ cls
 echo(
 echo(
 echo(
-echo                                         Select Option
-echo                            =======================================
+echo              Select Option
+echo =======================================
 echo(
 echo 1) "Enable Hyper-V"
 echo 2) "Disable Hyper-V"
